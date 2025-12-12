@@ -2,7 +2,21 @@
 using namespace std;
 
 char before(char x){
-	//Write your function definition here
+	int ascii_number_input = (int)x;
+	int ascii_number_capital_A = (int)'A';
+	int ascii_number_capital_Z = (int)'Z';
+	int ascii_number_before_input;
+
+	if (ascii_number_input == ascii_number_capital_A) {
+		return 'Z';
+	}
+	if(ascii_number_input > ascii_number_capital_A && ascii_number_input <= ascii_number_capital_Z){
+		ascii_number_before_input = ascii_number_input - 1;
+		return (char)ascii_number_before_input;
+	}
+	else{
+		return '0';
+	}
 }
 
 int main(){
